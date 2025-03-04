@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+        nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Spreads items to both sides */
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px; /* Adds space between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1badb8;
+}
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #1badb8;
+        }
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+        }
+        .hero {
+            background: url('https://i.pinimg.com/736x/8a/ba/4d/8aba4d19ea53838cede59c756337d0cd.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s;
+        }
+        .projects, .skills, .about, .contact {
+            background: #222;
+            margin: 20px auto;
+            border-radius: 10px;
+            padding: 40px;
+            width: 80%;
+        }
+        .projects div, .skills div {
+            margin: 15px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .projects div:hover, .skills div:hover {
+            transform: scale(1.05);
+        }
+        .skills .bar {
+            width: 100%;
+            background: #555;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .skills .bar span {
+            position: absolute;
+            height: 100%;
+            background: #1badb8;
+            width: 0;
+            animation: fillBar 2s forwards;
+        }
+        @keyframes fillBar {
+            to {
+                width: 100%;
+            }
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        .contact button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .contact button:hover {
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        /* Ensuring space before the footer */
+        #contact {
+            padding-bottom: 80px;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #000;
+            margin-top: auto; /* Pushes footer to bottom if content is short */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Prasanna</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+
+    <section id="hero" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Full Stack Developer | Designer | Innovator</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div>
+                <h3><a href="https://prasanna-1405.github.io/prasanna.github.io/mystore/">Project 1</a></h3>
+                <p>Innovative e-commerce platform.</p>
+            </div>
+            <div>
+                <h3><a href="https://prasanna-1405.github.io/prasanna.github.io/tempp27.html">Project 2</a></h3>
+                <p>AI-powered chatbot for businesses.</p>
+            </div>
+            <div>
+                <h3>Project 3</h3>
+                <p>Portfolio website with animations.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div>
+                <h3>HTML & CSS</h3>
+                <div class="bar"><span style="width: 90%;"></span></div>
+            </div>
+            <div>
+                <h3>JavaScript</h3>
+                <div class="bar"><span style="width: 80%;"></span></div>
+            </div>
+            <div>
+                <h3>React & Node.js</h3>
+                <div class="bar"><span style="width: 75%;"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+            <p>Hello! I'm a passionate full-stack developer with experience in modern web technologies like JavaScript, React, and Node.js. I love solving problems and building user-friendly applications.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <form>
+                <input type="text" placeholder="Enter Name" required>
+                <input type="email" placeholder="Enter Email" required>
+                <textarea rows="5" placeholder="Enter message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="footer">&copy; 2025. All rights reserved..</div>
+
+</body>
+</html>
+
+
