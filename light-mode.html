@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,90 +18,74 @@
         }
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
-            color: rgb(255, 255, 255);
+            background-color: #e2fffc;
+            color: black;
             text-align: center;
         }
         nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between; /* Spreads items to both sides */
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px; /* Adds space between links */
-}
-
-.nav-links a {
-    color: rgba(198, 243, 249, 0.615);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #1badb8;
-}
-
-
-        nav a {
-            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(114, 196, 186, 0.9);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: black;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 18px;
             font-weight: bold;
             transition: color 0.3s;
         }
-        nav a:hover {
-            color: #1badb8;
+        .nav-links a:hover {
+            color: #24932b;
         }
         section {
             padding: 80px 20px;
             min-height: 100vh;
         }
         .hero {
-            background: url('https://i.pinimg.com/736x/8a/ba/4d/8aba4d19ea53838cede59c756337d0cd.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
+        background: url('https://i.pinimg.com/736x/09/3e/2c/093e2c200fd4c850ac3c102897dbf938.jpg') center/cover no-repeat;
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
         .hero h1 {
             font-size: 3rem;
             font-weight: bold;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
         }
         .hero p {
             font-size: 1.5rem;
-            opacity: 0;
-            animation: fadeIn 1s forwards 0.5s;
         }
         .projects, .skills, .about, .contact {
-            background: #222;
+            background: #b4f7de;
             margin: 20px auto;
             border-radius: 10px;
             padding: 40px;
             width: 80%;
+            color: black;
         }
         .projects div, .skills div {
             margin: 15px auto;
             padding: 20px;
-            background: #333;
+            background: #60a4b0;
             border-radius: 8px;
             transition: transform 0.3s ease-in-out;
         }
@@ -111,7 +94,7 @@
         }
         .skills .bar {
             width: 100%;
-            background: #555;
+            background: #caeffc;
             height: 10px;
             border-radius: 5px;
             margin-top: 5px;
@@ -121,7 +104,7 @@
         .skills .bar span {
             position: absolute;
             height: 100%;
-            background: #1badb8;
+            background: #f5cc5c;
             width: 0;
             animation: fillBar 2s forwards;
         }
@@ -139,39 +122,33 @@
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
-            border: none;
+            border: 1px solid #aaa;
         }
         .contact button {
-            background: #007bff;
+            background: #e8af54;
             color: white;
             padding: 10px;
             cursor: pointer;
             transition: 0.3s;
+            border: none;
+            border-radius: 5px;
         }
         .contact button:hover {
-            background: #0056b3;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-        /* Ensuring space before the footer */
-        #contact {
-            padding-bottom: 80px;
+            background: #162c55;
         }
         .footer {
             text-align: center;
             padding: 15px;
-            background: #000;
-            margin-top: auto; /* Pushes footer to bottom if content is short */
+            background: #ddd;
+            margin-top: auto;
+            color: black;
         }
-        .light-mode-btn {
+        .dark-mode-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #f1c40f;
-    color: black;
+    background: #2c3e50;
+    color: white;
     padding: 15px 20px;
     border: none;
     border-radius: 50px;
@@ -181,10 +158,9 @@
     transition: 0.3s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-.light-mode-btn:hover {
-    background: #f39c12;
+.dark-mode-btn:hover {
+    background: #34495e;
 }
-
 
     </style>
 </head>
@@ -271,11 +247,11 @@
 
     <div class="footer">&copy; 2025. All rights reserved..</div>
 <!-- Floating Light Mode Button -->
-<button class="light-mode-btn" onclick="openLightMode()">🌞 Light Mode</button>
+<button class="dark-mode-btn" onclick="openDarkMode()">🌙 Dark Mode</button>
 
 <script>
-    function openLightMode() {
-        window.open('light-mode.html', '_blank');
+    function openDarkMode() {
+        window.open('index.html', '_blank'); 
     }
 </script>
 
@@ -283,5 +259,6 @@
 
 </body>
 </html>
+
 
 
