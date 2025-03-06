@@ -271,12 +271,105 @@
 
     <div class="footer">&copy; 2025. All rights reserved..</div>
 <!-- Floating Light Mode Button -->
-<button class="light-mode-btn" onclick="openLightMode()">🌞 Light Mode</button>
+<!-- Light Mode Toggle Button -->
+<button class="light-mode-btn" onclick="toggleMode()">🌞 Light Mode</button>
 
 <script>
-    function openLightMode() {
-        window.open('light-mode.html', '_blank');
+    function toggleMode() {
+        document.body.classList.toggle("light-mode");
+
+        // Change button text based on mode
+        const button = document.querySelector(".light-mode-btn");
+        if (document.body.classList.contains("light-mode")) {
+            button.textContent = "🌙 Dark Mode";
+        } else {
+            button.textContent = "🌞 Light Mode";
+        }
     }
+</script>
+
+<style>
+    /* Default (Dark Mode) */
+    body {
+        background-color: #111;
+        color: white;
+    }
+
+    .hero {
+        background: url('https://i.pinimg.com/736x/8a/ba/4d/8aba4d19ea53838cede59c756337d0cd.jpg') center/cover no-repeat;
+    }
+
+    .hero h1, .hero p {
+        color: white; /* Dark mode text */
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+        background: #000;
+        color: white;
+        margin-top: auto;
+    }
+
+    /* Light Mode */
+    .light-mode {
+        background-color: #e2fffc !important;
+        color: black !important;
+    }
+
+    .light-mode .hero {
+        background: url('https://i.pinimg.com/736x/09/3e/2c/093e2c200fd4c850ac3c102897dbf938.jpg') center/cover no-repeat;
+    }
+
+    .light-mode .hero h1,
+    .light-mode .hero p {
+        color: black !important;
+    }
+
+    .light-mode nav {
+        background: rgba(114, 196, 186, 0.9) !important;
+    }
+
+    .light-mode .projects, 
+    .light-mode .skills, 
+    .light-mode .about, 
+    .light-mode .contact {
+        background: #b4f7de !important;
+        color: black !important;
+    }
+
+    .light-mode .footer {
+        background: #ddd;
+        color: black;
+    }
+
+    /* Button */
+    .light-mode-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #f1c40f;
+        color: black;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .light-mode .light-mode-btn {
+        background: #2c3e50;
+        color: white;
+    }
+
+    .light-mode .light-mode-btn:hover {
+        background: #34495e;
+    }
+</style>
+
 </script>
 
 </script>
